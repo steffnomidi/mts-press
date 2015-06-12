@@ -110,6 +110,19 @@ header .mobile a .fa ,header .mobile a .icon {
 .desktop.favor .search {
 	margin: 26px 150px 0 270px;	
 }
+.desktop.favor a {
+	position: relative;
+}
+.desktop.favor span.number {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	color: #fff;
+	background: red;
+	font-size: 11px;
+	padding: 2px 6px 1px;
+	border-radius: 10px;
+}
 
 .desktop .search i.icon-search{
 	background: url(../images/search.png) no-repeat 50% 50% transparent;
@@ -309,7 +322,14 @@ text-align: right;
 #journal-number .titledate .date{
 	font-size: 13px;
 }
-
+#journal-number button.favor.favor-close {
+	padding: 6px;
+	background: #d8d8de;
+	color: #333333;
+}
+#journal-number button.favor.favor-close .close {
+	margin: -2px 0; 
+}
 /* end: MAGAZINE */
 
 /* footer */
@@ -367,13 +387,15 @@ footer * {
 	border-radius: 0;
 }
 .modal .close {
-	width: 28px;
-	height: 29px;
-	background: url(../images/close.png);
 	top: 30px;
 	right: 30px;
 	position: absolute;
 	z-index: 100;
+}
+.close-red{
+	width: 28px;
+	height: 29px;
+	background: url(../images/close.png);
 	opacity: 1;
 }
 
