@@ -45,6 +45,13 @@ $(document).ready(function(){ /*open ready*/
 		}
 	  }
 	})
-	
+
+	/* horizontal scrolling journals is_mobile
+	if ( $(window).width() < 768) {
+		$(".scroller").mCustomScrollbar({
+			axis:"x" // horizontal scrollbar
+		});
+	}
+	 */
 /* close ready */	
 });

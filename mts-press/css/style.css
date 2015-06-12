@@ -14,7 +14,21 @@ body {
 .nowrap {
 	white-space: nowrap;
 }
+/* buttons */
 
+button {
+	border: 0;
+	border-radius: 4px;
+	box-shadow: none;
+	background: #84888b;
+	color: #fff;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 6px 20px;
+}
+button.danger {
+	background: #e3000b;
+}
 /* icons */
 .icon, .fa {
 	position: relative;
@@ -44,9 +58,18 @@ body {
 	color: #ec1c24;
 }
 
+/* clearfix */
 
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
 
 /* HEADER */
+
 header .logo {
 	width: 217px;
 	float: left;
@@ -81,11 +104,11 @@ header .mobile a .fa ,header .mobile a .icon {
 }
 .desktop .search {
 	float: none;
-	margin: 26px 170px 0 230px;
+	margin: 26px 160px 0 230px;
 	position: relative;
 }
 .desktop.favor .search {
-	margin: 26px 170px 0 270px;	
+	margin: 26px 150px 0 270px;	
 }
 
 .desktop .search i.icon-search{
@@ -99,7 +122,7 @@ header .mobile a .fa ,header .mobile a .icon {
 	border: 1px solid #eaeaea;
 }
 
-/*user*/
+/* user */
 .desktop .user {
 float: right;
 width: 160px;
@@ -109,6 +132,7 @@ text-align: right;
 .user a:hover {
 	text-decoration: none;
 }
+
 /* categoryes */
 #categories .fa {
 	color: #fff;
@@ -132,7 +156,11 @@ text-align: right;
 	background: #ec1c24;
 }
 
-/* carousel */
+/* end: HEADER */
+
+
+
+/* carousel in mainpage */
 
 #j_slider {
 	background: #232323;
@@ -180,7 +208,8 @@ text-align: right;
 
 /* list */
 
-.list {
+.list{
+	font-size: 0;
 }
 .list {
 	padding: 0 0 20px;
@@ -214,6 +243,74 @@ text-align: right;
 	font-weight: normal;
 	color: #333333;
 }
+
+/* ONE MAGAZINE */
+
+#journal-number {
+	padding: 30px 15px;
+}
+#journal-number .row>div img{
+	max-width: 100%;
+}
+#journal-number .row>div .row-fluid {
+	padding-top: 15px;
+}
+#journal-number .row>div .row-fluid .subscribebutton,
+#journal-number .row>div .row-fluid .readbutton{
+	float: left;
+	text-align: center;
+}
+#journal-number .row>div .row-fluid.social {
+	clear: left;
+}
+#journal-number button {
+	margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+	#journal-number .btn-link {
+		margin-bottom: 35px;
+	}
+	#journal-number {
+		padding: 30px;
+	}
+	#journal-number {
+		display: table;
+	}
+	#journal-number .row {
+		display: table-row;
+	}
+	#journal-number .row>div {
+		display: table-cell;
+		float: none !important;
+		position: relative;
+	}
+	#journal-number .row>div .row-fluid{
+		position: absolute;
+		width: 100%;
+	}
+	
+	#journal-number .row>div .row-fluid.top { top: 0;}
+	#journal-number .row>div .row-fluid.bottom { bottom: 0;}
+
+
+	#journal-number .row>div .row-fluid.favorite {
+		text-align: right;
+	}
+	#journal-number .row>div .row-fluid.social {
+		text-align: center;
+	}
+
+}
+#journal-number .titledate .title{
+	font-size: 30px;
+	font-weight: bold;
+}
+#journal-number .titledate .date{
+	font-size: 13px;
+}
+
+/* end: MAGAZINE */
 
 /* footer */
 footer {
