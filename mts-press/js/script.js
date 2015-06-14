@@ -28,30 +28,33 @@ $(document).ready(function(){ /*open ready*/
 	$(".open-side-menu").click(function(){
 		if ($(".side-menu").hasClass('opened')) {
 			$(".side-menu").css({left: "-100%"}).removeClass('opened').addClass('closed');
+			$('body').css({"overflow-y": "scroll"});
 		}else {
 			$(".side-menu").css({left: 0}).removeClass('closed').addClass('opened');
+			$('body').css({"overflow-y": "hidden"});
 		}
 	});
 	
 	$(".side-menu").click(function(){
 		$(".side-menu").css({left: "-100%"}).removeClass('opened').addClass('closed');
+			$('body').css({"overflow-y": "scroll"});
 	});
 	
-	/* scroll affix for side-menu */	
-	$('#side-menu').affix({
-	  offset: {
-		top: function () {
-		  return ($('#side-menu').height() - $( window ).height() );
+
+	/* close old modals if open new modals */
+	$('a[data-toggle="modal"]').click(function() {
+		$('.modal').modal('hide');
+	});
+	
+	/* trigger profile settings */
+	$(".set .checkbox").click(function() { 
+		$(this).toggleClass('active');
+		if ( $(this).hasClass('active') ) {
+			$(this).children().attr('checked', true);
+		}else{
+			$(this).children().attr('checked', false);
 		}
-	  }
 	})
 
-	/* horizontal scrolling journals is_mobile
-	if ( $(window).width() < 768) {
-		$(".scroller").mCustomScrollbar({
-			axis:"x" // horizontal scrollbar
-		});
-	}
-	 */
 /* close ready */	
 });

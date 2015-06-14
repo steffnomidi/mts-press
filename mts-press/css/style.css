@@ -14,9 +14,14 @@ body {
 .nowrap {
 	white-space: nowrap;
 }
+
+h1,h2,h3,h4,h5 {
+	font-weight: bold;
+} 
+
 /* buttons */
 
-button {
+button, input[type="submit"], input[type="clear"] {
 	border: 0;
 	border-radius: 4px;
 	box-shadow: none;
@@ -26,8 +31,8 @@ button {
 	font-weight: bold;
 	padding: 6px 20px;
 }
-button.danger {
-	background: #e3000b;
+button.danger, input[type="submit"] {
+	background: #e3000b !important;
 }
 /* icons */
 .icon, .fa {
@@ -51,6 +56,21 @@ button.danger {
 .icon-w.icon-favor{ 	background: url(../images/favor-w.png) no-repeat 50% 50% transparent; }
 .icon-w.icon-bars{ 	background: url(../images/bars-w.png) no-repeat 50% 50% transparent; }
 
+/* forms: bootstrap cover */
+input.form-control, textarea.form-control {
+	background: #f7f7f7;
+	border: 1px solid #eaeaea;
+	height: 37px;
+}
+.form-group {
+	margin-bottom: 18px;
+}
+.control-label {
+	height: 37px;
+}
+textarea.form-control {
+	height: 117px;
+}
 
 /* colors */
 
@@ -128,12 +148,9 @@ header .mobile a .fa ,header .mobile a .icon {
 	background: url(../images/search.png) no-repeat 50% 50% transparent;
 	position: absolute;
 	right: 10px;
-	top: 8px;
+	top: 10px;
 }
-#search input.s {
-	background: #f7f7f7;
-	border: 1px solid #eaeaea;
-}
+
 
 /* user */
 .desktop .user {
@@ -165,7 +182,7 @@ text-align: right;
 	background: rgba(255,255,255,.1);
 }
 
-#categories a:active, #categories a.active, #categories a:focus {
+#categories .active a, #categories a.active, #categories a.active, #categories a:focus {
 	background: #ec1c24;
 }
 
@@ -207,10 +224,17 @@ text-align: right;
 #j_slider ul li .title .date{
 	font-size: 13px;	
 	font-weight: normal;
+	display: block;
 }
 
 /* MAIN SECTION */
-
+.main {
+	padding-bottom: 20px;
+}
+.main h4 {
+	font-size: 18px;
+	padding-top: 16px;
+}
 .main h2 {
 	color: #ec1c24;
 	font-size: 20px;
@@ -248,6 +272,7 @@ text-align: right;
 	font-size: 17px;
 	font-weight: bold;
 	padding-right: 30px;
+	display: block;
 }
 .list li a .title .date{
 	margin-top: 5px;
@@ -255,6 +280,7 @@ text-align: right;
 	font-size: 13px;	
 	font-weight: normal;
 	color: #333333;
+	display: block;
 }
 
 /* ONE MAGAZINE */
@@ -369,11 +395,21 @@ footer * {
 .modal {
   text-align: center;
 }
+.modal h3 {
+  font-size: 20px;
+  color: #ec1c24;
+}
 .modal:before {
   display: inline-block;
   vertical-align: middle;
   content: " ";
   height: 100%;
+}
+.modal .footer {
+	margin-top: 20px;
+	border-top: 1px #ccc solid;
+	text-align: center;
+	padding-top: 10px;
 }
 .modal-body {
   padding: 15px 35px 15px !important;
@@ -386,20 +422,25 @@ footer * {
 .modal-content {
 	border-radius: 0;
 }
-.modal .close {
+button.close {
 	top: 30px;
 	right: 30px;
 	position: absolute;
 	z-index: 100;
 }
-.close-red{
+.close-red, button.close-red{
 	width: 28px;
 	height: 29px;
 	background: url(../images/close.png);
 	opacity: 1;
 }
+body {
+	padding-right: 0 !important;
+}
 
-/* forms */
+
+
+/* modal forms */
 
 .modal form input{
 	font-size: 18px;
@@ -410,22 +451,34 @@ footer * {
 	top: 4px;
 }
 
-@media (max-width: 767px) {
+
+@media (max-width: 746px) {
+
+	.modal-backdrop.in {
+		opacity: 0;
+	}
 	.modal:before {
 		height: 0;
 	}
 	.modal-dialog {
 		margin: 0;
+		top: 28px;
 	}
+
 	.modal-body {
-	  padding: 15px 35px 15px 15px !important;
+	  padding: 15px 15px 15px 15px !important;
 	}
 	.modal {
 	  padding: 0 !important;
 	 }
-
 }
 
+@media (min-width: 684px, max-width: 746px) {
+	.modal:before {
+		height: 100%;
+	}
+
+}
 /* SIDE MENU*/
 
 #side-menu.affix-top {
@@ -443,12 +496,15 @@ top: initial !important;
 	position: absolute;
 	left: -100%;
 	width: 310px;
-	min-height: 100%;
+	height: 100%;
+	overflow: hidden;
 	transition: left .3s;
 }
 
 #side-menu .container {
+	height: 100%;
 	padding: 30px 15px;
+	overflow-y: scroll;
 }
 
 #side-menu li a{
@@ -470,7 +526,11 @@ top: initial !important;
 #side-menu a:active, #categories a.active, #categories a:focus {
 	background: #ec1c24;
 }
-
+@media (min-width: 456px) {
+	#side-menu .container{
+		margin-right: -17px;
+	}
+}
 
 @media (max-width: 455px) {
 #side-menu {
@@ -478,4 +538,82 @@ top: initial !important;
 	width: 100%;
 	right: 100%;
 }
-}
+
+}
+
+/* 1000 small things */
+
+form#question {
+	padding: 38px 0 20px;
+}
+.profile-settings {
+	font-size: 0;
+}
+.profile-settings h4{
+	padding: 10px 0 3px;
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.profile-settings .set {
+	display: inline-block;
+	font-size: 13px;
+	padding-top: 18px;
+}
+.profile-settings .checkbox {
+	padding: 0 15px 50px;
+	float: left;
+	width: 45px;
+	height: 29px;
+	background: url(../images/checkbox.png) no-repeat 0 0 transparent;
+	cursor: pointer;
+	transition: background .3s;
+}
+.profile-settings .checkbox.active {
+	background: url(../images/checkbox_en.png) no-repeat 0 0 transparent;
+}
+
+#favorite .img-container {
+	display: block;
+	position: relative;
+	float: left;
+	margin-bottom: 10px;
+}
+#favorite .icon {
+	opacity: 0;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url(../images/close.png) no-repeat 50% 50% rgba(0,0,0, .8);
+}
+#favorite .icon:hover{
+	opacity: 1;
+}
+#favorite .title {
+	clear: both;
+}
+
+/* downpress footer */
+@media (min-width: 456px) {
+	.wrap {
+		height:auto !important;
+		height:100%;
+		min-height:100%;
+		position:relative;
+	}
+	.empty {
+		height:135px; /* равняется высоте футера */
+	}
+	.footer {
+		height:135px;
+		margin-top:-135px;
+		position:relative;
+	}
+}
+
+
+
+

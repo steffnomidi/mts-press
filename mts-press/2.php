@@ -1,4 +1,4 @@
-<?php include "header.html"; ?>
+<?php include "header-category.html"; ?>
 
 	<section id="j_slider">
 
@@ -66,7 +66,7 @@
 	
 	<section id="pop" class="main">
 		<div class="container">
-			<h2>Популярное</h2>
+			<h2>Мужские</h2>
 			<ul class="list">
 			
 				<li class="journal col-md-3 col-sm-4 col-xs-12">
