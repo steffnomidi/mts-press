@@ -227,6 +227,35 @@ text-align: right;
 	display: block;
 }
 
+@media (min-width: 670px) {
+	.image-preloader {
+		width: 0;
+		height: 0;
+		background: url(../images/arr_big_right_active.png) url(../images/arr_big_left_active.png);
+	}
+	#j_slider .owl-nav div{
+		width: 110px;
+		height: 110px;
+		position: absolute;
+		top: 40%;
+		transition: background .3s;
+	}
+	#j_slider .owl-next{
+		right: 30px;
+		background: url(../images/arr_big_right.png);
+	}
+	#j_slider .owl-prev{
+		left: 30px;
+		background: url(../images/arr_big_left.png);
+	}
+	#j_slider .owl-next:hover{
+		background: url(../images/arr_big_right_active.png);
+	}
+	#j_slider .owl-prev:hover{
+		background: url(../images/arr_big_left_active.png);
+	}
+}
+
 /* MAIN SECTION */
 .main {
 	padding-bottom: 20px;

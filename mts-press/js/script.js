@@ -3,6 +3,9 @@ $(document).ready(function(){ /*open ready*/
 
 	/*start Owl Carousel in mainpage */
 	$(".slider").owlCarousel({
+		nav: true,
+		navText: false,
+		dots: false,
 		loop:true,
 		autoplayTimeout: 5000,
 		autoplay: true,
