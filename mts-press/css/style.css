@@ -426,6 +426,13 @@ footer * {
 
 .modal {
   text-align: center;
+  opacity: 0;
+  transform: scale(.93);
+	transition: all .3s;
+}
+.modal.in {
+	opacity: 1;
+  transform: scale(1);	
 }
 .modal h3 {
   font-size: 20px;

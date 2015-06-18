@@ -9,7 +9,7 @@
 	<!-- //////////////Modals\\\\\\\\\\\\\\ -->
 	
 	<!-- get access -->
-<div class="modal fade" id="get_access" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="get_access" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 		<button type="button" class="close close-red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
@@ -24,7 +24,7 @@
 				<div class="form-group">
 					<div class="col-sm-3 col-xs-2 text-right plusseven"><span class="hidden-xs">Телефон: </span><b>+7</b></div>
 					<div class="col-sm-6 col-xs-10">
-						<input name="tel" type="text" class="form-control" value="( _ _ _ ) _ _ _ - _ _ - _ _">
+						<input name="tel" type="text" class="form-control">
 					</div>
 					<div class="col-sm-3 hidden-xs"></div>
 				</div>
@@ -41,7 +41,7 @@
 			<div class="row">
 				<div class="col-sm-3 col-xs-2 text-right"></div>
 				<div class="col-sm-6 col-xs-10 text-center" >
-					<a class="btn btn-link" href="#" data-toggle="modal" data-target="#autorization">Войти в профиль</a>
+					<a class="btn btn-link" href="#"  data-toggle="modal" data-dismiss="modal" data-target="#autorization">Войти в профиль</a>
 				</div>
 				<div class="col-sm-3 hidden-xs"></div>
 			</div>
@@ -53,7 +53,7 @@
 	
 
 	<!--  confirm code -->
-<div class="modal fade" id="confirm_code" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="confirm_code" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 		<button type="button" class="close close-red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
@@ -91,21 +91,21 @@
 
 
 	<!--  autorization -->
-<div class="modal fade" id="autorization" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="autorization" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 		<button type="button" class="close close-red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
 		<div class="modal-body">
 			<h3>Войти</h3>
 			<div>
-				<p>Введите ваш номер телефона и пароль указанный при регистрации. Если вы забыли пароль <a href=""  data-toggle="modal" data-target="#restore_access">воспользуйтесь восстановлением</a>.
+				<p>Введите ваш номер телефона и пароль указанный при регистрации. Если вы забыли пароль <a href=""    data-toggle="modal"  data-dismiss="modal" data-target="#restore_access">воспользуйтесь восстановлением</a>.
 			</div>
 			<form action="./" class="form-horizontal">
 			
 				<div class="form-group">
 					<div class="col-sm-3 col-xs-2 text-right plusseven"><span class="hidden-xs">Телефон: </span><b>+7</b></div>
 					<div class="col-sm-6 col-xs-10">
-						<input name="tel" type="text" class="form-control" value="( _ _ _ ) _ _ _ - _ _ - _ _">
+						<input name="tel" type="text" class="form-control">
 					</div>
 					<div class="col-sm-3 hidden-xs"></div>
 				</div>
@@ -125,7 +125,7 @@
 				</div>
 				
 				<div class="form-group">
-					<div class="col-sm-3 col-xs-2 text-right"><a href="" class="hidden-xs" data-toggle="modal" data-target="#get_access">Регистрация</a></div>
+					<div class="col-sm-3 col-xs-2 text-right"><a href="" class="hidden-xs"  data-toggle="modal" data-dismiss="modal" data-target="#get_access">Регистрация</a></div>
 					<div class="col-sm-6 col-xs-10">
 						<input type="submit" class="form-control" value="Войти">
 					</div>
@@ -133,7 +133,7 @@
 
 				<div class="form-group visible-xs">
 					<div class="col-sm-3 col-xs-2 text-right"></div>
-					<div class="col-sm-6 col-xs-10 text-center"><a href="" class="btn btn-link" data-toggle="modal" data-target="#get_access">Регистрация</a></div>
+					<div class="col-sm-6 col-xs-10 text-center"><a href="" class="btn btn-link"  data-toggle="modal" data-dismiss="modal" data-target="#get_access">Регистрация</a></div>
 				</div>
 				
 			</form>
@@ -147,7 +147,7 @@
 
 
 	<!-- create password -->
-<div class="modal fade" id="create_password" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="create_password" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 		<button type="button" class="close close-red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
@@ -184,7 +184,7 @@
 
 
 	<!--  restore_access -->
-<div class="modal fade" id="restore_access" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="restore_access" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 		<button type="button" class="close close-red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
@@ -199,7 +199,7 @@
 				<div class="form-group">
 					<div class="col-sm-3 col-xs-4 text-right plusseven control-label"><span class="hidden-xs">Телефон: </span><b>+7</b></div>
 					<div class="col-sm-6 col-xs-8">
-						<input name="tel" type="text" class="form-control" value="( _ _ _ ) _ _ _ - _ _ - _ _">
+						<input name="tel" type="text" class="form-control" >
 					</div>
 					<div class="col-sm-3 hidden-xs"></div>
 				</div>
@@ -227,7 +227,7 @@
 			
 			</form>
 
-			<div class="footer">Пожалуйста ознакомьтесь с <a href="#">Соглашениями о пользовании</a> системой для работы с проектом</div>
+			<div class="modal-footer">Пожалуйста ознакомьтесь с <a href="#">Соглашениями о пользовании</a> системой для работы с проектом</div>
 		</div>
     </div>
   </div>
@@ -268,8 +268,9 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery-1.11.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 
+	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/script.js"></script>
 

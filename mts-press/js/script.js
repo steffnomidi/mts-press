@@ -31,7 +31,7 @@ $(document).ready(function(){ /*open ready*/
 	$(".open-side-menu").click(function(){
 		if ($(".side-menu").hasClass('opened')) {
 			$(".side-menu").css({left: "-100%"}).removeClass('opened').addClass('closed');
-			$('body').css({"overflow-y": "scroll"});
+			$('body').css({"overflow-y": ""});
 		}else {
 			$(".side-menu").css({left: 0}).removeClass('closed').addClass('opened');
 			$('body').css({"overflow-y": "hidden"});
@@ -40,16 +40,11 @@ $(document).ready(function(){ /*open ready*/
 	
 	$(".side-menu").click(function(){
 		$(".side-menu").css({left: "-100%"}).removeClass('opened').addClass('closed');
-			$('body').css({"overflow-y": "scroll"});
+			$('body').css({"overflow-y": ""});
 	});
 	
+	$("input[name=tel]").mask("(999) 999-99-99",{placeholder:" "});
 
-	/* close old modals if open new modals */
-	$('a[data-toggle="modal"]').click(function() {
-		$('.modal').modal('hide');
-	});
-	
-	/* trigger profile settings */
 	$(".set .checkbox").click(function() { 
 		$(this).toggleClass('active');
 		if ( $(this).hasClass('active') ) {
