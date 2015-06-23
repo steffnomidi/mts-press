@@ -32,7 +32,7 @@ button, input[type="submit"], input[type="clear"] {
 	padding: 6px 20px;
 }
 button.danger, input[type="submit"] {
-	background: #e3000b !important;
+	background: #e30611 !important;
 }
 /* icons */
 .icon, .fa {
@@ -75,7 +75,7 @@ textarea.form-control {
 /* colors */
 
 .t-red {
-	color: #ec1c24;
+	color: #e30611;
 }
 
 /* clearfix */
@@ -102,7 +102,7 @@ header .logo {
 /*mobile*/
 
 header .mobile {
-	background: #e3001b;
+	background: #e30611;
 	color: #fff;
 }
 header .mobile .logo {
@@ -183,7 +183,7 @@ text-align: right;
 }
 
 #categories .active a, #categories a.active, #categories a.active, #categories a:focus {
-	background: #ec1c24;
+	background: #e30611;
 }
 
 /* end: HEADER */
@@ -265,7 +265,7 @@ text-align: right;
 	padding-top: 16px;
 }
 .main h2 {
-	color: #ec1c24;
+	color: #e30611;
 	font-size: 20px;
 	padding-bottom: 15px;
 	margin-bottom: 0;
@@ -436,7 +436,7 @@ footer * {
 }
 .modal h3 {
   font-size: 20px;
-  color: #ec1c24;
+  color: #e30611;
 }
 .modal:before {
   display: inline-block;
@@ -563,7 +563,7 @@ top: initial !important;
 }
 
 #side-menu a:active, #categories a.active, #categories a:focus {
-	background: #ec1c24;
+	background: #e30611;
 }
 @media (min-width: 456px) {
 	#side-menu .container{
