@@ -444,11 +444,12 @@ footer * {
   content: " ";
   height: 100%;
 }
-.modal .footer {
+.modal .m-footer {
 	margin-top: 20px;
 	border-top: 1px #ccc solid;
 	text-align: center;
 	padding-top: 10px;
+	font-size: 12px;
 }
 .modal-body {
   padding: 15px 35px 15px !important;
@@ -633,6 +634,15 @@ form#question {
 }
 #favorite .title {
 	clear: both;
+}
+
+.pricesubscribe {
+	margin: 30px 0;
+	display: block;
+}
+.clause {
+	font-size: 12px;
+	color: #aaa;
 }
 
 /* downpress footer */
