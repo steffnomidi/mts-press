@@ -45,11 +45,16 @@ button.danger, input[type="submit"] {
 	color: #000;
 	display: inline-block;
 }
+.mobile .icon {
+	width: 24px;
+	height: 24px;
+}
 .icon-user { 	background: url(../images/user.png) no-repeat 50% 50% transparent; }
 .icon-search{	background: url(../images/search.png) no-repeat 50% 50% transparent; }
 .icon-close{ 	background: url(../images/close.png) no-repeat 50% 50% transparent; }
 .icon-close{ 	background: url(../images/close.png) no-repeat 50% 50% transparent; }
 .icon-favor{ 	background: url(../images/favor.png) no-repeat 50% 50% transparent; }
+.icon-bars{ 	background: url(../images/bars.png) no-repeat 50% 50% transparent; }
 .icon-w.icon-user { 	background: url(../images/user-w.png) no-repeat 50% 50% transparent; }
 .icon-w.icon-search{	background: url(../images/search-w.png) no-repeat 50% 50% transparent; }
 .icon-w.icon-close{ 	background: url(../images/close-w.png) no-repeat 50% 50% transparent; }
@@ -91,8 +96,9 @@ textarea.form-control {
 /* HEADER */
 
 header .logo {
-	width: 217px;
+	width: 322px;
 	float: left;
+	margin: 19px 0 28px;
 }
 
 .logo a img {
@@ -102,12 +108,13 @@ header .logo {
 /*mobile*/
 
 header .mobile {
-	background: #e30611;
-	color: #fff;
+	background: #fff;
+	margin: 14px;
 }
 header .mobile .logo {
 	width: 50%;
 	padding: 0;
+	margin: 0;
 }
 .logo .mobile a img {
 	margin: 8px 0 0;
@@ -120,15 +127,18 @@ header .mobile a .fa ,header .mobile a .icon {
 /*search*/
 .desktop .favor {
 	float: left;
-	margin-top: 26px;
+	margin-top: 31px;
 }
 .desktop .search {
 	float: none;
-	margin: 26px 160px 0 230px;
+	margin: 33px 160px 0 330px;
 	position: relative;
 }
+.desktop .search input {
+	box-shadow: none;
+}
 .desktop.favor .search {
-	margin: 26px 150px 0 270px;	
+	margin: 33px 150px 0 380px;	
 }
 .desktop.favor a {
 	position: relative;
@@ -154,10 +164,10 @@ header .mobile a .fa ,header .mobile a .icon {
 
 /* user */
 .desktop .user {
-float: right;
-width: 160px;
-margin-top: -37px;
-text-align: right;
+	float: right;
+	width: 160px;
+	margin-top: -37px;
+	text-align: right;
 }
 .user a:hover {
 	text-decoration: none;
