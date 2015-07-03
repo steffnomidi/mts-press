@@ -362,6 +362,8 @@ header .mobile a .fa ,header .mobile a .icon {
 		display: table-cell;
 		float: none !important;
 		position: relative;
+		vertical-align: top;
+		padding: 10px 10px 90px;
 	}
 	#journal-number .row>div .row-fluid{
 		position: absolute;
