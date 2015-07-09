@@ -43,7 +43,7 @@ $(document).ready(function(){ /*open ready*/
 			$('body').css({"overflow-y": ""});
 	});
 	
-	$("input[name=tel]").mask("(999) 999-99-99",{placeholder:" "});
+	$("input[name=tel]").mask("(999) 999-99-99",{placeholder:"_"});
 
 	$(".set .checkbox").click(function() { 
 		$(this).toggleClass('active');
@@ -52,7 +52,14 @@ $(document).ready(function(){ /*open ready*/
 		}else{
 			$(this).children().attr('checked', false);
 		}
-	})
-
+	});
+	
+	/* open/close search field in mobile header */
+	$("header .mobile .icon-search").click(function() {
+		$(".searchform").css("top",2);
+	});
+	$("header .searchform i").click(function() {
+		$(".searchform").css("top",-40);
+	});
 /* close ready */	
 });
