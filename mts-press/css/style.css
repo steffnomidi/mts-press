@@ -64,6 +64,9 @@ button.danger, input[type="submit"] {
 .icon-w.icon-close{ 	background: url(../images/close-w.png) no-repeat 50% 50% transparent; }
 .icon-w.icon-favor{ 	background: url(../images/favor-w.png) no-repeat 50% 50% transparent; }
 .icon-w.icon-bars{ 	background: url(../images/bars-w.png) no-repeat 50% 50% transparent; }
+.icon-w.icon-envel{ 	background: url(../images/envel-w.png) no-repeat 50% 50% transparent; }
+.icon-w.icon-page{ 	background: url(../images/page-w.png) no-repeat 50% 50% transparent; }
+.icon-w.icon-ques{ 	background: url(../images/ques-w.png) no-repeat 50% 50% transparent; }
 
 /* forms: bootstrap cover */
 input.form-control, textarea.form-control {
@@ -590,16 +593,42 @@ top: initial !important;
 	padding-bottom: 30px;
 }
 
+#side-menu a {
+	text-decoration: none;
+	white-space: normal;
+}
+#side-menu hr {
+	margin-left: 40px;
+	border-top-color: rgba(255,255,255,.2);
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+#side-menu a .icon {
+	margin-right: 10px;
+	margin-bottom: 6px;
+	display: block;
+	float: left;
+	top: 1px;
+}
+
+#side-menu .btn {
+	padding: 3px 12px;
+	}
 #side-menu .container {
 	height: 100%;
 	padding: 30px 15px;
 	overflow-y: scroll;
 }
 
-#side-menu li a{
+#side-menu li a, #side-menu li h4{
 	min-height: 30px;
 	padding: 5px 10px 5px 40px;
+	margin: 0;
 }
+#side-menu li h4 {
+	color: rgba(255,255,255,.5);
+}
+
 #side-menu a {
 	text-align: left;
 	width: 100%;
@@ -608,12 +637,14 @@ top: initial !important;
 	font-size: 16px;
 	font-weight: bold;
 }
-#side-menu a:hover {
+#side-menu a:hover, #side-menu a:focus {
 	background: rgba(255,255,255,.1);
 }
-
-#side-menu a:active, #categories a.active, #categories a:focus {
-	background: #e30611;
+#side-menu li.active a, #side-menu li a:hover, #side-menu li a:focus {
+	color: #e30611;
+}
+#categories a.active, #categories a:focus {
+	background-color: #e30611;
 }
 @media (min-width: 456px) {
 	#side-menu .container{
