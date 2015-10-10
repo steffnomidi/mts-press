@@ -178,7 +178,7 @@ header .mobile a .fa ,header .mobile a .icon {
 	box-shadow: none;
 }
 .desktop.favor .search {
-	margin: 26px 150px 0 380px;
+	margin: 26px 220px 0 380px;
 }
 .desktop.favor a {
 	position: relative;
@@ -212,7 +212,17 @@ header .mobile a .fa ,header .mobile a .icon {
 .user a:hover {
 	text-decoration: none;
 }
-
+.desktop.favor .user {
+  width: 216px;
+}
+.divider {
+  display: inline-block;
+  height: 20px;
+  width: 1px;
+  background-color: #aaa;
+  position: relative;
+  top:6px;
+}
 /* categoryes */
 #categories .fa {
 	color: #fff;
@@ -245,6 +255,8 @@ header .mobile a .fa ,header .mobile a .icon {
 
 #j_slider {
 	background: #232323;
+  height: 470px;
+  margin-bottom: 10px;
 }
 #j_slider ul {
 	padding: 20px 0 0;
